@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow-x: hidden;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Poppins-Regular.otf') format(opentype);
+}
+
+main {
+    background-color: #f3f3f3;
+    height: 46vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion {
+    max-width: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-item {
+    border: 1px solid #303030;
+}
+
+.accordion-header {
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 0px;
+    font-family: poppins;
+    font-size: 15px;
+    color: #303030;
+    height: 45px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-header:hover {
+    background: #ebebeb;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content p {
+    padding: 15px;
+    font-family: poppins;
+    font-size: 13px;
+    margin: 0;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+}
+
+.accordion-header.active .arrow {
+    transform: rotate(180deg);
+}
